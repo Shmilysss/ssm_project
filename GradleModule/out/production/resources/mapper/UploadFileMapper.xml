@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="person.wqying.dao.UploadFileMapper">
+  <resultMap id="BaseResultMap" type="person.wqying.entity.UploadFile">
+    <id column="path_id" jdbcType="INTEGER" property="pathId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="classify" jdbcType="VARCHAR" property="classify" />
+    <result column="file_name" jdbcType="VARCHAR" property="fileName" />
+    <result column="suffix" jdbcType="VARCHAR" property="suffix" />
+    <result column="img_path" jdbcType="VARCHAR" property="imgPath" />
+    <result column="sequence" jdbcType="INTEGER" property="sequence" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from upload_file
+    where path_id = #{pathId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.UploadFile">
+    insert into upload_file (path_id, type, classify, 
+      file_name, suffix, img_path, 
+      sequence, user_id, status, 
+      insert_time, update_time)
+    values (#{pathId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{classify,jdbcType=VARCHAR}, 
+      #{fileName,jdbcType=VARCHAR}, #{suffix,jdbcType=VARCHAR}, #{imgPath,jdbcType=VARCHAR}, 
+      #{sequence,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{status,jdbcType=CHAR}, 
+      #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.UploadFile">
+    update upload_file
+    set type = #{type,jdbcType=VARCHAR},
+      classify = #{classify,jdbcType=VARCHAR},
+      file_name = #{fileName,jdbcType=VARCHAR},
+      suffix = #{suffix,jdbcType=VARCHAR},
+      img_path = #{imgPath,jdbcType=VARCHAR},
+      sequence = #{sequence,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where path_id = #{pathId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select path_id, type, classify, file_name, suffix, img_path, sequence, user_id, status, 
+    insert_time, update_time
+    from upload_file
+    where path_id = #{pathId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select path_id, type, classify, file_name, suffix, img_path, sequence, user_id, status, 
+    insert_time, update_time
+    from upload_file
+  </select>
+</mapper>

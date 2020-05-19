@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="person.wqying.dao.ConstMapper">
+  <resultMap id="BaseResultMap" type="person.wqying.entity.Const">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="depict" jdbcType="VARCHAR" property="depict" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="val" jdbcType="VARCHAR" property="val" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from const
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.Const">
+    insert into const (id, depict, code, 
+      val, status, insert_time, 
+      update_time)
+    values (#{id,jdbcType=INTEGER}, #{depict,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
+      #{val,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.Const">
+    update const
+    set depict = #{depict,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      val = #{val,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, depict, code, val, status, insert_time, update_time
+    from const
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, depict, code, val, status, insert_time, update_time
+    from const
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.Const">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="depict" jdbcType="VARCHAR" property="depict" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="val" jdbcType="VARCHAR" property="val" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from const
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.Const">
+    insert into const (id, depict, code, 
+      val, status, insert_time, 
+      update_time)
+    values (#{id,jdbcType=INTEGER}, #{depict,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
+      #{val,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.Const">
+    update const
+    set depict = #{depict,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      val = #{val,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, depict, code, val, status, insert_time, update_time
+    from const
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, depict, code, val, status, insert_time, update_time
+    from const
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.Const">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="depict" jdbcType="VARCHAR" property="depict" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="val" jdbcType="VARCHAR" property="val" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from const
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.Const">
+    insert into const (id, depict, code, 
+      val, status, insert_time, 
+      update_time)
+    values (#{id,jdbcType=INTEGER}, #{depict,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
+      #{val,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.Const">
+    update const
+    set depict = #{depict,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      val = #{val,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, depict, code, val, status, insert_time, update_time
+    from const
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, depict, code, val, status, insert_time, update_time
+    from const
+  </select>
+</mapper>

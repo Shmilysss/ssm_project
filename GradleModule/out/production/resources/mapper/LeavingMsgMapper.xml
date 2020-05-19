@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="person.wqying.dao.LeavingMsgMapper">
+  <resultMap id="BaseResultMap" type="person.wqying.entity.LeavingMsg">
+    <id column="msg_id" jdbcType="INTEGER" property="msgId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="article_id" jdbcType="INTEGER" property="articleId" />
+    <result column="upper_id" jdbcType="INTEGER" property="upperId" />
+    <result column="msg_order" jdbcType="INTEGER" property="msgOrder" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from leaving_msg
+    where msg_id = #{msgId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.LeavingMsg">
+    insert into leaving_msg (msg_id, type, user_id, 
+      article_id, upper_id, msg_order, 
+      status, insert_time, update_time, 
+      content)
+    values (#{msgId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
+      #{articleId,jdbcType=INTEGER}, #{upperId,jdbcType=INTEGER}, #{msgOrder,jdbcType=INTEGER}, 
+      #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.LeavingMsg">
+    update leaving_msg
+    set type = #{type,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      article_id = #{articleId,jdbcType=INTEGER},
+      upper_id = #{upperId,jdbcType=INTEGER},
+      msg_order = #{msgOrder,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where msg_id = #{msgId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select msg_id, type, user_id, article_id, upper_id, msg_order, status, insert_time, 
+    update_time, content
+    from leaving_msg
+    where msg_id = #{msgId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select msg_id, type, user_id, article_id, upper_id, msg_order, status, insert_time, 
+    update_time, content
+    from leaving_msg
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.LeavingMsg">
+    <id column="msg_id" jdbcType="INTEGER" property="msgId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="article_id" jdbcType="INTEGER" property="articleId" />
+    <result column="upper_id" jdbcType="INTEGER" property="upperId" />
+    <result column="msg_order" jdbcType="INTEGER" property="msgOrder" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from leaving_msg
+    where msg_id = #{msgId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.LeavingMsg">
+    insert into leaving_msg (msg_id, type, user_id, 
+      article_id, upper_id, msg_order, 
+      status, insert_time, update_time, 
+      content)
+    values (#{msgId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
+      #{articleId,jdbcType=INTEGER}, #{upperId,jdbcType=INTEGER}, #{msgOrder,jdbcType=INTEGER}, 
+      #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.LeavingMsg">
+    update leaving_msg
+    set type = #{type,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      article_id = #{articleId,jdbcType=INTEGER},
+      upper_id = #{upperId,jdbcType=INTEGER},
+      msg_order = #{msgOrder,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where msg_id = #{msgId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select msg_id, type, user_id, article_id, upper_id, msg_order, status, insert_time, 
+    update_time, content
+    from leaving_msg
+    where msg_id = #{msgId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select msg_id, type, user_id, article_id, upper_id, msg_order, status, insert_time, 
+    update_time, content
+    from leaving_msg
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.LeavingMsg">
+    <id column="msg_id" jdbcType="INTEGER" property="msgId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="article_id" jdbcType="INTEGER" property="articleId" />
+    <result column="upper_id" jdbcType="INTEGER" property="upperId" />
+    <result column="msg_order" jdbcType="INTEGER" property="msgOrder" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from leaving_msg
+    where msg_id = #{msgId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.LeavingMsg">
+    insert into leaving_msg (msg_id, type, user_id, 
+      article_id, upper_id, msg_order, 
+      status, insert_time, update_time, 
+      content)
+    values (#{msgId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
+      #{articleId,jdbcType=INTEGER}, #{upperId,jdbcType=INTEGER}, #{msgOrder,jdbcType=INTEGER}, 
+      #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.LeavingMsg">
+    update leaving_msg
+    set type = #{type,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      article_id = #{articleId,jdbcType=INTEGER},
+      upper_id = #{upperId,jdbcType=INTEGER},
+      msg_order = #{msgOrder,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where msg_id = #{msgId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select msg_id, type, user_id, article_id, upper_id, msg_order, status, insert_time, 
+    update_time, content
+    from leaving_msg
+    where msg_id = #{msgId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select msg_id, type, user_id, article_id, upper_id, msg_order, status, insert_time, 
+    update_time, content
+    from leaving_msg
+  </select>
+</mapper>

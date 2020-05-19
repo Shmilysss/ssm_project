@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="person.wqying.dao.BlogUserMapper">
+  <resultMap id="BaseResultMap" type="person.wqying.entity.BlogUser">
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_code" jdbcType="VARCHAR" property="userCode" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="user_nick_name" jdbcType="VARCHAR" property="userNickName" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="user_img_path" jdbcType="VARCHAR" property="userImgPath" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="moblie" jdbcType="VARCHAR" property="moblie" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="graduate_school" jdbcType="VARCHAR" property="graduateSchool" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="birtd" jdbcType="TIMESTAMP" property="birtd" />
+    <result column="user_real_name" jdbcType="VARCHAR" property="userRealName" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from blog_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.BlogUser">
+    insert into blog_user (user_id, user_code, password, 
+      user_nick_name, gender, user_img_path, 
+      summary, age, phone_number, 
+      moblie, email, address, 
+      graduate_school, education, birtd, 
+      user_real_name, status, insert_time, 
+      update_time)
+    values (#{userId,jdbcType=INTEGER}, #{userCode,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{userNickName,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR}, #{userImgPath,jdbcType=VARCHAR}, 
+      #{summary,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{phoneNumber,jdbcType=VARCHAR}, 
+      #{moblie,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{graduateSchool,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{birtd,jdbcType=TIMESTAMP}, 
+      #{userRealName,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.BlogUser">
+    update blog_user
+    set user_code = #{userCode,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      user_nick_name = #{userNickName,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      user_img_path = #{userImgPath,jdbcType=VARCHAR},
+      summary = #{summary,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      moblie = #{moblie,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      graduate_school = #{graduateSchool,jdbcType=VARCHAR},
+      education = #{education,jdbcType=VARCHAR},
+      birtd = #{birtd,jdbcType=TIMESTAMP},
+      user_real_name = #{userRealName,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select user_id, user_code, password, user_nick_name, gender, user_img_path, summary, 
+    age, phone_number, moblie, email, address, graduate_school, education, birtd, user_real_name, 
+    status, insert_time, update_time
+    from blog_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select user_id, user_code, password, user_nick_name, gender, user_img_path, summary, 
+    age, phone_number, moblie, email, address, graduate_school, education, birtd, user_real_name, 
+    status, insert_time, update_time
+    from blog_user
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.BlogUser">
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_code" jdbcType="VARCHAR" property="userCode" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="user_nick_name" jdbcType="VARCHAR" property="userNickName" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="user_img_path" jdbcType="VARCHAR" property="userImgPath" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="moblie" jdbcType="VARCHAR" property="moblie" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="graduate_school" jdbcType="VARCHAR" property="graduateSchool" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="birtd" jdbcType="TIMESTAMP" property="birtd" />
+    <result column="user_real_name" jdbcType="VARCHAR" property="userRealName" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from blog_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.BlogUser">
+    insert into blog_user (user_id, user_code, password, 
+      user_nick_name, gender, user_img_path, 
+      summary, age, phone_number, 
+      moblie, email, address, 
+      graduate_school, education, birtd, 
+      user_real_name, status, insert_time, 
+      update_time)
+    values (#{userId,jdbcType=INTEGER}, #{userCode,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{userNickName,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR}, #{userImgPath,jdbcType=VARCHAR}, 
+      #{summary,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{phoneNumber,jdbcType=VARCHAR}, 
+      #{moblie,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{graduateSchool,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{birtd,jdbcType=TIMESTAMP}, 
+      #{userRealName,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.BlogUser">
+    update blog_user
+    set user_code = #{userCode,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      user_nick_name = #{userNickName,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      user_img_path = #{userImgPath,jdbcType=VARCHAR},
+      summary = #{summary,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      moblie = #{moblie,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      graduate_school = #{graduateSchool,jdbcType=VARCHAR},
+      education = #{education,jdbcType=VARCHAR},
+      birtd = #{birtd,jdbcType=TIMESTAMP},
+      user_real_name = #{userRealName,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select user_id, user_code, password, user_nick_name, gender, user_img_path, summary, 
+    age, phone_number, moblie, email, address, graduate_school, education, birtd, user_real_name, 
+    status, insert_time, update_time
+    from blog_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select user_id, user_code, password, user_nick_name, gender, user_img_path, summary, 
+    age, phone_number, moblie, email, address, graduate_school, education, birtd, user_real_name, 
+    status, insert_time, update_time
+    from blog_user
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.BlogUser">
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_code" jdbcType="VARCHAR" property="userCode" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="user_nick_name" jdbcType="VARCHAR" property="userNickName" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="user_img_path" jdbcType="VARCHAR" property="userImgPath" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="moblie" jdbcType="VARCHAR" property="moblie" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="graduate_school" jdbcType="VARCHAR" property="graduateSchool" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="birtd" jdbcType="TIMESTAMP" property="birtd" />
+    <result column="user_real_name" jdbcType="VARCHAR" property="userRealName" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from blog_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.BlogUser">
+    insert into blog_user (user_id, user_code, password, 
+      user_nick_name, gender, user_img_path, 
+      summary, age, phone_number, 
+      moblie, email, address, 
+      graduate_school, education, birtd, 
+      user_real_name, status, insert_time, 
+      update_time)
+    values (#{userId,jdbcType=INTEGER}, #{userCode,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{userNickName,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR}, #{userImgPath,jdbcType=VARCHAR}, 
+      #{summary,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{phoneNumber,jdbcType=VARCHAR}, 
+      #{moblie,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{graduateSchool,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{birtd,jdbcType=TIMESTAMP}, 
+      #{userRealName,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.BlogUser">
+    update blog_user
+    set user_code = #{userCode,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      user_nick_name = #{userNickName,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      user_img_path = #{userImgPath,jdbcType=VARCHAR},
+      summary = #{summary,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      moblie = #{moblie,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      graduate_school = #{graduateSchool,jdbcType=VARCHAR},
+      education = #{education,jdbcType=VARCHAR},
+      birtd = #{birtd,jdbcType=TIMESTAMP},
+      user_real_name = #{userRealName,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select user_id, user_code, password, user_nick_name, gender, user_img_path, summary, 
+    age, phone_number, moblie, email, address, graduate_school, education, birtd, user_real_name, 
+    status, insert_time, update_time
+    from blog_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select user_id, user_code, password, user_nick_name, gender, user_img_path, summary, 
+    age, phone_number, moblie, email, address, graduate_school, education, birtd, user_real_name, 
+    status, insert_time, update_time
+    from blog_user
+  </select>
+</mapper>

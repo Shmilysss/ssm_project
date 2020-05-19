@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="person.wqying.dao.ArticleKindMapper">
+  <resultMap id="BaseResultMap" type="person.wqying.entity.ArticleKind">
+    <id column="art_kinds_id" jdbcType="INTEGER" property="artKindsId" />
+    <result column="module" jdbcType="VARCHAR" property="module" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="classify" jdbcType="VARCHAR" property="classify" />
+    <result column="sum" jdbcType="INTEGER" property="sum" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from article_kind
+    where art_kinds_id = #{artKindsId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.ArticleKind">
+    insert into article_kind (art_kinds_id, module, type, 
+      classify, sum, status, 
+      insert_time, update_time)
+    values (#{artKindsId,jdbcType=INTEGER}, #{module,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{classify,jdbcType=VARCHAR}, #{sum,jdbcType=INTEGER}, #{status,jdbcType=CHAR}, 
+      #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.ArticleKind">
+    update article_kind
+    set module = #{module,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      classify = #{classify,jdbcType=VARCHAR},
+      sum = #{sum,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where art_kinds_id = #{artKindsId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select art_kinds_id, module, type, classify, sum, status, insert_time, update_time
+    from article_kind
+    where art_kinds_id = #{artKindsId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select art_kinds_id, module, type, classify, sum, status, insert_time, update_time
+    from article_kind
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.ArticleKind">
+    <id column="art_kinds_id" jdbcType="INTEGER" property="artKindsId" />
+    <result column="module" jdbcType="VARCHAR" property="module" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="classify" jdbcType="VARCHAR" property="classify" />
+    <result column="sum" jdbcType="INTEGER" property="sum" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from article_kind
+    where art_kinds_id = #{artKindsId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.ArticleKind">
+    insert into article_kind (art_kinds_id, module, type, 
+      classify, sum, status, 
+      insert_time, update_time)
+    values (#{artKindsId,jdbcType=INTEGER}, #{module,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{classify,jdbcType=VARCHAR}, #{sum,jdbcType=INTEGER}, #{status,jdbcType=CHAR}, 
+      #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.ArticleKind">
+    update article_kind
+    set module = #{module,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      classify = #{classify,jdbcType=VARCHAR},
+      sum = #{sum,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where art_kinds_id = #{artKindsId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select art_kinds_id, module, type, classify, sum, status, insert_time, update_time
+    from article_kind
+    where art_kinds_id = #{artKindsId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select art_kinds_id, module, type, classify, sum, status, insert_time, update_time
+    from article_kind
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.ArticleKind">
+    <id column="art_kinds_id" jdbcType="INTEGER" property="artKindsId" />
+    <result column="module" jdbcType="VARCHAR" property="module" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="classify" jdbcType="VARCHAR" property="classify" />
+    <result column="sum" jdbcType="INTEGER" property="sum" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from article_kind
+    where art_kinds_id = #{artKindsId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.ArticleKind">
+    insert into article_kind (art_kinds_id, module, type, 
+      classify, sum, status, 
+      insert_time, update_time)
+    values (#{artKindsId,jdbcType=INTEGER}, #{module,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{classify,jdbcType=VARCHAR}, #{sum,jdbcType=INTEGER}, #{status,jdbcType=CHAR}, 
+      #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.ArticleKind">
+    update article_kind
+    set module = #{module,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      classify = #{classify,jdbcType=VARCHAR},
+      sum = #{sum,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where art_kinds_id = #{artKindsId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select art_kinds_id, module, type, classify, sum, status, insert_time, update_time
+    from article_kind
+    where art_kinds_id = #{artKindsId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select art_kinds_id, module, type, classify, sum, status, insert_time, update_time
+    from article_kind
+  </select>
+</mapper>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="person.wqying.dao.OuterLinkMapper">
+  <resultMap id="BaseResultMap" type="person.wqying.entity.OuterLink">
+    <id column="link_id" jdbcType="INTEGER" property="linkId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="depict" jdbcType="VARCHAR" property="depict" />
+    <result column="link" jdbcType="VARCHAR" property="link" />
+    <result column="sequence" jdbcType="INTEGER" property="sequence" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from outer_link
+    where link_id = #{linkId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.OuterLink">
+    insert into outer_link (link_id, type, depict, 
+      link, sequence, status, 
+      insert_time, update_time)
+    values (#{linkId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{depict,jdbcType=VARCHAR}, 
+      #{link,jdbcType=VARCHAR}, #{sequence,jdbcType=INTEGER}, #{status,jdbcType=CHAR}, 
+      #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.OuterLink">
+    update outer_link
+    set type = #{type,jdbcType=VARCHAR},
+      depict = #{depict,jdbcType=VARCHAR},
+      link = #{link,jdbcType=VARCHAR},
+      sequence = #{sequence,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where link_id = #{linkId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select link_id, type, depict, link, sequence, status, insert_time, update_time
+    from outer_link
+    where link_id = #{linkId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select link_id, type, depict, link, sequence, status, insert_time, update_time
+    from outer_link
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.OuterLink">
+    <id column="link_id" jdbcType="INTEGER" property="linkId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="depict" jdbcType="VARCHAR" property="depict" />
+    <result column="link" jdbcType="VARCHAR" property="link" />
+    <result column="sequence" jdbcType="INTEGER" property="sequence" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from outer_link
+    where link_id = #{linkId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.OuterLink">
+    insert into outer_link (link_id, type, depict, 
+      link, sequence, status, 
+      insert_time, update_time)
+    values (#{linkId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{depict,jdbcType=VARCHAR}, 
+      #{link,jdbcType=VARCHAR}, #{sequence,jdbcType=INTEGER}, #{status,jdbcType=CHAR}, 
+      #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.OuterLink">
+    update outer_link
+    set type = #{type,jdbcType=VARCHAR},
+      depict = #{depict,jdbcType=VARCHAR},
+      link = #{link,jdbcType=VARCHAR},
+      sequence = #{sequence,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where link_id = #{linkId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select link_id, type, depict, link, sequence, status, insert_time, update_time
+    from outer_link
+    where link_id = #{linkId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select link_id, type, depict, link, sequence, status, insert_time, update_time
+    from outer_link
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.OuterLink">
+    <id column="link_id" jdbcType="INTEGER" property="linkId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="depict" jdbcType="VARCHAR" property="depict" />
+    <result column="link" jdbcType="VARCHAR" property="link" />
+    <result column="sequence" jdbcType="INTEGER" property="sequence" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from outer_link
+    where link_id = #{linkId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.OuterLink">
+    insert into outer_link (link_id, type, depict, 
+      link, sequence, status, 
+      insert_time, update_time)
+    values (#{linkId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{depict,jdbcType=VARCHAR}, 
+      #{link,jdbcType=VARCHAR}, #{sequence,jdbcType=INTEGER}, #{status,jdbcType=CHAR}, 
+      #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.OuterLink">
+    update outer_link
+    set type = #{type,jdbcType=VARCHAR},
+      depict = #{depict,jdbcType=VARCHAR},
+      link = #{link,jdbcType=VARCHAR},
+      sequence = #{sequence,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where link_id = #{linkId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select link_id, type, depict, link, sequence, status, insert_time, update_time
+    from outer_link
+    where link_id = #{linkId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select link_id, type, depict, link, sequence, status, insert_time, update_time
+    from outer_link
+  </select>
+</mapper>

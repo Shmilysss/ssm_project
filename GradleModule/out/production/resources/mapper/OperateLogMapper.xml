@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="person.wqying.dao.OperateLogMapper">
+  <resultMap id="BaseResultMap" type="person.wqying.entity.OperateLog">
+    <id column="log_id" jdbcType="INTEGER" property="logId" />
+    <result column="operator_id" jdbcType="INTEGER" property="operatorId" />
+    <result column="operate_ip" jdbcType="VARCHAR" property="operateIp" />
+    <result column="operate_type" jdbcType="VARCHAR" property="operateType" />
+    <result column="operate_desc" jdbcType="VARCHAR" property="operateDesc" />
+    <result column="request_params" jdbcType="VARCHAR" property="requestParams" />
+    <result column="request_url" jdbcType="VARCHAR" property="requestUrl" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from operate_log
+    where log_id = #{logId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.OperateLog">
+    insert into operate_log (log_id, operator_id, operate_ip, 
+      operate_type, operate_desc, request_params, 
+      request_url, status, insert_time, 
+      update_time)
+    values (#{logId,jdbcType=INTEGER}, #{operatorId,jdbcType=INTEGER}, #{operateIp,jdbcType=VARCHAR}, 
+      #{operateType,jdbcType=VARCHAR}, #{operateDesc,jdbcType=VARCHAR}, #{requestParams,jdbcType=VARCHAR}, 
+      #{requestUrl,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.OperateLog">
+    update operate_log
+    set operator_id = #{operatorId,jdbcType=INTEGER},
+      operate_ip = #{operateIp,jdbcType=VARCHAR},
+      operate_type = #{operateType,jdbcType=VARCHAR},
+      operate_desc = #{operateDesc,jdbcType=VARCHAR},
+      request_params = #{requestParams,jdbcType=VARCHAR},
+      request_url = #{requestUrl,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where log_id = #{logId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select log_id, operator_id, operate_ip, operate_type, operate_desc, request_params, 
+    request_url, status, insert_time, update_time
+    from operate_log
+    where log_id = #{logId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select log_id, operator_id, operate_ip, operate_type, operate_desc, request_params, 
+    request_url, status, insert_time, update_time
+    from operate_log
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.OperateLog">
+    <id column="log_id" jdbcType="INTEGER" property="logId" />
+    <result column="operator_id" jdbcType="INTEGER" property="operatorId" />
+    <result column="operate_ip" jdbcType="VARCHAR" property="operateIp" />
+    <result column="operate_type" jdbcType="VARCHAR" property="operateType" />
+    <result column="operate_desc" jdbcType="VARCHAR" property="operateDesc" />
+    <result column="request_params" jdbcType="VARCHAR" property="requestParams" />
+    <result column="request_url" jdbcType="VARCHAR" property="requestUrl" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from operate_log
+    where log_id = #{logId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.OperateLog">
+    insert into operate_log (log_id, operator_id, operate_ip, 
+      operate_type, operate_desc, request_params, 
+      request_url, status, insert_time, 
+      update_time)
+    values (#{logId,jdbcType=INTEGER}, #{operatorId,jdbcType=INTEGER}, #{operateIp,jdbcType=VARCHAR}, 
+      #{operateType,jdbcType=VARCHAR}, #{operateDesc,jdbcType=VARCHAR}, #{requestParams,jdbcType=VARCHAR}, 
+      #{requestUrl,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.OperateLog">
+    update operate_log
+    set operator_id = #{operatorId,jdbcType=INTEGER},
+      operate_ip = #{operateIp,jdbcType=VARCHAR},
+      operate_type = #{operateType,jdbcType=VARCHAR},
+      operate_desc = #{operateDesc,jdbcType=VARCHAR},
+      request_params = #{requestParams,jdbcType=VARCHAR},
+      request_url = #{requestUrl,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where log_id = #{logId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select log_id, operator_id, operate_ip, operate_type, operate_desc, request_params, 
+    request_url, status, insert_time, update_time
+    from operate_log
+    where log_id = #{logId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select log_id, operator_id, operate_ip, operate_type, operate_desc, request_params, 
+    request_url, status, insert_time, update_time
+    from operate_log
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.OperateLog">
+    <id column="log_id" jdbcType="INTEGER" property="logId" />
+    <result column="operator_id" jdbcType="INTEGER" property="operatorId" />
+    <result column="operate_ip" jdbcType="VARCHAR" property="operateIp" />
+    <result column="operate_type" jdbcType="VARCHAR" property="operateType" />
+    <result column="operate_desc" jdbcType="VARCHAR" property="operateDesc" />
+    <result column="request_params" jdbcType="VARCHAR" property="requestParams" />
+    <result column="request_url" jdbcType="VARCHAR" property="requestUrl" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from operate_log
+    where log_id = #{logId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.OperateLog">
+    insert into operate_log (log_id, operator_id, operate_ip, 
+      operate_type, operate_desc, request_params, 
+      request_url, status, insert_time, 
+      update_time)
+    values (#{logId,jdbcType=INTEGER}, #{operatorId,jdbcType=INTEGER}, #{operateIp,jdbcType=VARCHAR}, 
+      #{operateType,jdbcType=VARCHAR}, #{operateDesc,jdbcType=VARCHAR}, #{requestParams,jdbcType=VARCHAR}, 
+      #{requestUrl,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.OperateLog">
+    update operate_log
+    set operator_id = #{operatorId,jdbcType=INTEGER},
+      operate_ip = #{operateIp,jdbcType=VARCHAR},
+      operate_type = #{operateType,jdbcType=VARCHAR},
+      operate_desc = #{operateDesc,jdbcType=VARCHAR},
+      request_params = #{requestParams,jdbcType=VARCHAR},
+      request_url = #{requestUrl,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where log_id = #{logId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select log_id, operator_id, operate_ip, operate_type, operate_desc, request_params, 
+    request_url, status, insert_time, update_time
+    from operate_log
+    where log_id = #{logId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select log_id, operator_id, operate_ip, operate_type, operate_desc, request_params, 
+    request_url, status, insert_time, update_time
+    from operate_log
+  </select>
+</mapper>

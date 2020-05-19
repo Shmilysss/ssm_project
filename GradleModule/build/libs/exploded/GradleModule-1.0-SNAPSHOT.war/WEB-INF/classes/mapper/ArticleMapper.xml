@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="person.wqying.dao.ArticleMapper">
+  <resultMap id="BaseResultMap" type="person.wqying.entity.Article">
+    <id column="article_id" jdbcType="INTEGER" property="articleId" />
+    <result column="module" jdbcType="VARCHAR" property="module" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="classify" jdbcType="VARCHAR" property="classify" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="rux_words" jdbcType="VARCHAR" property="ruxWords" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="art_img_path" jdbcType="VARCHAR" property="artImgPath" />
+    <result column="likes" jdbcType="INTEGER" property="likes" />
+    <result column="views" jdbcType="INTEGER" property="views" />
+    <result column="commons" jdbcType="INTEGER" property="commons" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from article
+    where article_id = #{articleId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.Article">
+    insert into article (article_id, module, type, 
+      classify, title, author, 
+      user_id, rux_words, summary, 
+      art_img_path, likes, views, 
+      commons, status, insert_time, 
+      update_time, content)
+    values (#{articleId,jdbcType=INTEGER}, #{module,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{classify,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
+      #{userId,jdbcType=INTEGER}, #{ruxWords,jdbcType=VARCHAR}, #{summary,jdbcType=VARCHAR}, 
+      #{artImgPath,jdbcType=VARCHAR}, #{likes,jdbcType=INTEGER}, #{views,jdbcType=INTEGER}, 
+      #{commons,jdbcType=INTEGER}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.Article">
+    update article
+    set module = #{module,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      classify = #{classify,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      rux_words = #{ruxWords,jdbcType=VARCHAR},
+      summary = #{summary,jdbcType=VARCHAR},
+      art_img_path = #{artImgPath,jdbcType=VARCHAR},
+      likes = #{likes,jdbcType=INTEGER},
+      views = #{views,jdbcType=INTEGER},
+      commons = #{commons,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where article_id = #{articleId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select article_id, module, type, classify, title, author, user_id, rux_words, summary, 
+    art_img_path, likes, views, commons, status, insert_time, update_time, content
+    from article
+    where article_id = #{articleId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select article_id, module, type, classify, title, author, user_id, rux_words, summary, 
+    art_img_path, likes, views, commons, status, insert_time, update_time, content
+    from article
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.Article">
+    <id column="article_id" jdbcType="INTEGER" property="articleId" />
+    <result column="module" jdbcType="VARCHAR" property="module" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="classify" jdbcType="VARCHAR" property="classify" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="rux_words" jdbcType="VARCHAR" property="ruxWords" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="art_img_path" jdbcType="VARCHAR" property="artImgPath" />
+    <result column="likes" jdbcType="INTEGER" property="likes" />
+    <result column="views" jdbcType="INTEGER" property="views" />
+    <result column="commons" jdbcType="INTEGER" property="commons" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from article
+    where article_id = #{articleId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.Article">
+    insert into article (article_id, module, type, 
+      classify, title, author, 
+      user_id, rux_words, summary, 
+      art_img_path, likes, views, 
+      commons, status, insert_time, 
+      update_time, content)
+    values (#{articleId,jdbcType=INTEGER}, #{module,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{classify,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
+      #{userId,jdbcType=INTEGER}, #{ruxWords,jdbcType=VARCHAR}, #{summary,jdbcType=VARCHAR}, 
+      #{artImgPath,jdbcType=VARCHAR}, #{likes,jdbcType=INTEGER}, #{views,jdbcType=INTEGER}, 
+      #{commons,jdbcType=INTEGER}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.Article">
+    update article
+    set module = #{module,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      classify = #{classify,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      rux_words = #{ruxWords,jdbcType=VARCHAR},
+      summary = #{summary,jdbcType=VARCHAR},
+      art_img_path = #{artImgPath,jdbcType=VARCHAR},
+      likes = #{likes,jdbcType=INTEGER},
+      views = #{views,jdbcType=INTEGER},
+      commons = #{commons,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where article_id = #{articleId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select article_id, module, type, classify, title, author, user_id, rux_words, summary, 
+    art_img_path, likes, views, commons, status, insert_time, update_time, content
+    from article
+    where article_id = #{articleId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select article_id, module, type, classify, title, author, user_id, rux_words, summary, 
+    art_img_path, likes, views, commons, status, insert_time, update_time, content
+    from article
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.Article">
+    <id column="article_id" jdbcType="INTEGER" property="articleId" />
+    <result column="module" jdbcType="VARCHAR" property="module" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="classify" jdbcType="VARCHAR" property="classify" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="rux_words" jdbcType="VARCHAR" property="ruxWords" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="art_img_path" jdbcType="VARCHAR" property="artImgPath" />
+    <result column="likes" jdbcType="INTEGER" property="likes" />
+    <result column="views" jdbcType="INTEGER" property="views" />
+    <result column="commons" jdbcType="INTEGER" property="commons" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from article
+    where article_id = #{articleId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.Article">
+    insert into article (article_id, module, type, 
+      classify, title, author, 
+      user_id, rux_words, summary, 
+      art_img_path, likes, views, 
+      commons, status, insert_time, 
+      update_time, content)
+    values (#{articleId,jdbcType=INTEGER}, #{module,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{classify,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
+      #{userId,jdbcType=INTEGER}, #{ruxWords,jdbcType=VARCHAR}, #{summary,jdbcType=VARCHAR}, 
+      #{artImgPath,jdbcType=VARCHAR}, #{likes,jdbcType=INTEGER}, #{views,jdbcType=INTEGER}, 
+      #{commons,jdbcType=INTEGER}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.Article">
+    update article
+    set module = #{module,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      classify = #{classify,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      rux_words = #{ruxWords,jdbcType=VARCHAR},
+      summary = #{summary,jdbcType=VARCHAR},
+      art_img_path = #{artImgPath,jdbcType=VARCHAR},
+      likes = #{likes,jdbcType=INTEGER},
+      views = #{views,jdbcType=INTEGER},
+      commons = #{commons,jdbcType=INTEGER},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where article_id = #{articleId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select article_id, module, type, classify, title, author, user_id, rux_words, summary, 
+    art_img_path, likes, views, commons, status, insert_time, update_time, content
+    from article
+    where article_id = #{articleId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select article_id, module, type, classify, title, author, user_id, rux_words, summary, 
+    art_img_path, likes, views, commons, status, insert_time, update_time, content
+    from article
+  </select>
+</mapper>

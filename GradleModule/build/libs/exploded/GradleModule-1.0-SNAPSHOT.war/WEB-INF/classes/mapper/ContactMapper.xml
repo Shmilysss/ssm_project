@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="person.wqying.dao.ContactMapper">
+  <resultMap id="BaseResultMap" type="person.wqying.entity.Contact">
+    <id column="contact_id" jdbcType="INTEGER" property="contactId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="depict" jdbcType="VARCHAR" property="depict" />
+    <result column="words" jdbcType="VARCHAR" property="words" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="img_path" jdbcType="VARCHAR" property="imgPath" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from contact
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.Contact">
+    insert into contact (contact_id, type, name, 
+      depict, words, user_id, 
+      img_path, status, insert_time, 
+      update_time)
+    values (#{contactId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{depict,jdbcType=VARCHAR}, #{words,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
+      #{imgPath,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.Contact">
+    update contact
+    set type = #{type,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      depict = #{depict,jdbcType=VARCHAR},
+      words = #{words,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      img_path = #{imgPath,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select contact_id, type, name, depict, words, user_id, img_path, status, insert_time, 
+    update_time
+    from contact
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select contact_id, type, name, depict, words, user_id, img_path, status, insert_time, 
+    update_time
+    from contact
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.Contact">
+    <id column="contact_id" jdbcType="INTEGER" property="contactId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="depict" jdbcType="VARCHAR" property="depict" />
+    <result column="words" jdbcType="VARCHAR" property="words" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="img_path" jdbcType="VARCHAR" property="imgPath" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from contact
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.Contact">
+    insert into contact (contact_id, type, name, 
+      depict, words, user_id, 
+      img_path, status, insert_time, 
+      update_time)
+    values (#{contactId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{depict,jdbcType=VARCHAR}, #{words,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
+      #{imgPath,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.Contact">
+    update contact
+    set type = #{type,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      depict = #{depict,jdbcType=VARCHAR},
+      words = #{words,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      img_path = #{imgPath,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select contact_id, type, name, depict, words, user_id, img_path, status, insert_time, 
+    update_time
+    from contact
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select contact_id, type, name, depict, words, user_id, img_path, status, insert_time, 
+    update_time
+    from contact
+  </select>
+  <resultMap id="BaseResultMap" type="person.wqying.entity.Contact">
+    <id column="contact_id" jdbcType="INTEGER" property="contactId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="depict" jdbcType="VARCHAR" property="depict" />
+    <result column="words" jdbcType="VARCHAR" property="words" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="img_path" jdbcType="VARCHAR" property="imgPath" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from contact
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="person.wqying.entity.Contact">
+    insert into contact (contact_id, type, name, 
+      depict, words, user_id, 
+      img_path, status, insert_time, 
+      update_time)
+    values (#{contactId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{depict,jdbcType=VARCHAR}, #{words,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
+      #{imgPath,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="person.wqying.entity.Contact">
+    update contact
+    set type = #{type,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      depict = #{depict,jdbcType=VARCHAR},
+      words = #{words,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      img_path = #{imgPath,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select contact_id, type, name, depict, words, user_id, img_path, status, insert_time, 
+    update_time
+    from contact
+    where contact_id = #{contactId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select contact_id, type, name, depict, words, user_id, img_path, status, insert_time, 
+    update_time
+    from contact
+  </select>
+</mapper>
