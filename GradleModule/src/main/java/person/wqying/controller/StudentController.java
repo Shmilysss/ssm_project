@@ -23,7 +23,6 @@ public class StudentController {
 //        Student student = new Student();
 //        student.setName("ali");
 //        student.setPassword("123456");
-        System.out.println("students=-=-=="+students.size());
 
         model.addAttribute("students",students);
 
